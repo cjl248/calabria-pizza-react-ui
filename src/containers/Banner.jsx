@@ -27,7 +27,7 @@ export default class Banner extends React.Component {
 
   render() {
     return (
-      <Container fluid id={"banner-container"}>
+      <Container id={"banner-container"} fluid>
 
         <Header
           as='h2'

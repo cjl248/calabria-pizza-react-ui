@@ -12,7 +12,7 @@ export default class Navigation extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="button-container">
         <Button.Group>
 
           <Button

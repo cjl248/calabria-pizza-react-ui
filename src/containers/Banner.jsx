@@ -2,12 +2,15 @@ import React from 'react'
 
 import { Container, Header } from 'semantic-ui-react'
 
+import marbleBackground from '../images/marbleBackground.jpg'
+
 import title from '../images/calabria_pizza_title.png'
 
 // margin : "TOPpx RIGHTpx BOTTOMpx LEFTpx"
 
 const sloganStyle = {
-  margin :  "5px 0px 25px 0px",
+  margin :  "0px 0px 25px 0px",
+  paddingTop: "5px",
   color : "#005100"
 }
 const imgStyle = {
@@ -22,12 +25,15 @@ const addressStyle = {
   margin :  "0px 0px 20px 0px",
   color : "#7F2432"
 }
+const containerStyle = {
+  // backgroundImage : `url(${marbleBackground})`
+}
 
 export default class Banner extends React.Component {
 
   render() {
     return (
-      <Container id={"banner-container"} fluid>
+      <Container fluid style={containerStyle} id={"banner-container"}>
 
         <Header
           as='h2'

@@ -1,18 +1,33 @@
-import React from 'react';
-import Navigation from './containers/navigation'
-import Main from './containers/main'
+import React from 'react'
+
+import Banner from './containers/Banner'
+import Navigation from './containers/Navigation'
+import Main from './containers/Main'
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Navigation />
-        <Main />
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    activePage: 'HOME'
+  }
+
+  setPage = (activePage) => {
+    this.setState({
+      activePage
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Banner />
+        <Navigation setPage={this.setPage} />
+        <Main activePage={this.state.activePage} />
+      </div>
+    )
+  }
+
 }
 
 export default App;
